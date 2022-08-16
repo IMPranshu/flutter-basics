@@ -5,14 +5,13 @@ void main() {
 }
 
 void test(String? firstName, String? middleName, String? lastName) {
-  // ?? is an infix operator which is checking for null values in LHS.
-  // If LHS is null then RHS value is stored in the variable.
+  // ??= is an infix operator here. So we first declare a value 'name'
+  String? name = firstName;
 
-  // let's say if both firstname and middle name are null then,
-  // it will be (firstname ?? middlename) ?? lastname
-  // null ?? lastname
-
-  final name = firstName ?? middleName ?? lastName;
+  // ??= operaotr checks for LHS if it is null, it then assigns the value of
+  // RHS to 'name' here.
+  name ??= middleName;
+  //name ??= lastName;
   print(name);
 }
 
