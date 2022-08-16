@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 
-String getFullName(String firstName, String lastName) {
-  return '$firstName $lastName';
-}
-
 void main() {
   runApp(const MyApp());
+}
+
+void test(String? firstName, String? middleName, String? lastName) {
+  // ?? is an infix operator which is checking for null values in LHS.
+  // If LHS is null then RHS value is stored in the variable.
+
+  // let's say if both firstname and middle name are null then,
+  // it will be (firstname ?? middlename) ?? lastname
+  // null ?? lastname
+
+  final name = firstName ?? middleName ?? lastName;
+  print(name);
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +22,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(getFullName('Pranshu', 'Agrawal'));
+    test(null, 'Foo', 'Bar');
+    test(null, null, 'Bar');
     return MaterialApp(
       title: 'Flutter',
       theme: ThemeData(
