@@ -9,6 +9,11 @@ void main() {
         title: Text("Hello, World!!!"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment
+            .start, // mainaxis is straight line from top to bottom. .end will start layout i.e. the contents from the bottom without any spacing
+        crossAxisAlignment: CrossAxisAlignment
+            .stretch, // crossaxis is straight line from left to right // .strecth will stretch the layout from left to right
+
         children: [
           Container(
             decoration: BoxDecoration(
