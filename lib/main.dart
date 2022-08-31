@@ -8,13 +8,31 @@ void main() {
       appBar: AppBar(
         title: Text("Hello, World!!!"),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          // BoxDecoration is the most used
-          color: Colors.orange, // predefined constant for color
-        ),
-        child: Text("One"), // Widget Inside the COntainer
-      ), // Container is the div is Flutter, we can use it to constraint
+      body: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              // BoxDecoration is the most used
+              color: Colors.orange, // predefined constant for color
+            ),
+            child: Text("One"), // Widget Inside the COntainer
+          ),
+          Container(
+            decoration: BoxDecoration(
+              // BoxDecoration is the most used
+              color: Colors.blue, // predefined constant for color
+            ),
+            child: Text("Two"), // Widget Inside the COntainer
+          ),
+          Container(
+            decoration: BoxDecoration(
+              // BoxDecoration is the most used
+              color: Colors.green, // predefined constant for color
+            ),
+            child: Text("Three"), // Widget Inside the COntainer
+          ),
+        ], // Container is the div is Flutter, we can use it to constraint
+      ),
     ),
   ));
 }
