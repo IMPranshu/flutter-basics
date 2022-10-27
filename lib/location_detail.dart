@@ -8,15 +8,21 @@ import 'package:flutter/material.dart';
 
 //Statless wifgests are effictively class - OOPS concet
 
-
 // extends takes all the properties from the StatelessWidgets(in this case) and makes a class
 // basicaly inheritace
 
-class LocationDetail extends StatelessWidget{
+class LocationDetail extends StatelessWidget {
+// In every widget there is a build func. and we need to override it
+// in order to put something on the screen
 
-}
-
-Scaffold(
+  // here we are returinign widget
+  @override // annotation - It is a keyword (Just like in Java)
+  // when usign override we have to specify the input and the output of the funtion i.e.
+  // the parameter that will be passed and the return value.
+  Widget build(BuildContext context) {
+    // BuildContext - In Flutter there is a tree of the widget. Everytime a widget is formed the BuildContext is invoked.
+    // Just remeber whenever we use Build we have to pass a "context"
+    return Scaffold(
       // It provides a blank screen that is hsown in the display
       appBar: AppBar(
         title: Text("Hello, World!!!"),
@@ -51,4 +57,6 @@ Scaffold(
           ),
         ], // Container is the div is Flutter, we can use it to constraint
       ),
-    ),
+    );
+  }
+}
