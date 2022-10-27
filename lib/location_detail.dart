@@ -23,40 +23,44 @@ class LocationDetail extends StatelessWidget {
     // BuildContext - In Flutter there is a tree of the widget. Everytime a widget is formed the BuildContext is invoked.
     // Just remeber whenever we use Build we have to pass a "context"
     return Scaffold(
-      // It provides a blank screen that is hsown in the display
-      appBar: AppBar(
-        title: Text("Hello, World!!!"),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment
-            .start, // mainaxis is straight line from top to bottom. .end will start layout i.e. the contents from the bottom without any spacing
-        crossAxisAlignment: CrossAxisAlignment
-            .stretch, // crossaxis is straight line from left to right // .strecth will stretch the layout from left to right
+        // It provides a blank screen that is hsown in the display
+        appBar: AppBar(
+          title: Text("Hello, World!!"),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment
+              .start, // mainaxis is straight line from top to bottom. .end will start layout i.e. the contents from the bottom without any spacing
+          crossAxisAlignment: CrossAxisAlignment
+              .stretch, // crossaxis is straight line from left to right // .strecth will stretch the layout from left to right
 
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              // BoxDecoration is the most used
-              color: Colors.orange, // predefined constant for color
-            ),
-            child: Text("One"), // Widget Inside the COntainer
-          ),
-          Container(
-            decoration: BoxDecoration(
-              // BoxDecoration is the most used
-              color: Colors.blue, // predefined constant for color
-            ),
-            child: Text("Two"), // Widget Inside the COntainer
-          ),
-          Container(
-            decoration: BoxDecoration(
-              // BoxDecoration is the most used
-              color: Colors.green, // predefined constant for color
-            ),
-            child: Text("Three"), // Widget Inside the COntainer
-          ),
-        ], // Container is the div is Flutter, we can use it to constraint
+          children: [
+            section("One", Colors.red),
+            section("Two", Colors.green),
+            // for using a private method/function in fliytter(just Like we do in C++)
+            // use a _ befor the funtion name
+            _privateSection("Three", Colors.purple),
+          ], // Container is the div is Flutter, we can use it to constraint
+        ));
+  }
+
+  Widget section(String title, Color color) {
+    return Container(
+      decoration: BoxDecoration(
+        // BoxDecoration is the most used
+        color: color, // predefined constant for color
       ),
+      child: Text(title), // Widget Inside the COntainer
+    );
+  }
+
+  // a private method that can be only accessed within the class
+  Widget _privateSection(String title, Color color) {
+    return Container(
+      decoration: BoxDecoration(
+        // BoxDecoration is the most used
+        color: color, // predefined constant for color
+      ),
+      child: Text(title), // Widget Inside the COntainer
     );
   }
 }
