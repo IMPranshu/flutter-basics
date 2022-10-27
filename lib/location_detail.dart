@@ -6,6 +6,15 @@ import 'package:flutter/material.dart';
 // For starters We only need to focus on Stateless Widget
 // Stateless widget doesn't keep track of any values while the app is running.
 
+//Statless wifgests are effictively class - OOPS concet
+
+
+// extends takes all the properties from the StatelessWidgets(in this case) and makes a class
+// basicaly inheritace
+
+class LocationDetail extends StatelessWidget{
+
+}
 
 Scaffold(
       // It provides a blank screen that is hsown in the display
