@@ -8,7 +8,7 @@ class Location {
   // final means can't be redefined again
   final String name;
   final String url;
-  final List<LocationData> facts;
+  final List<LocationFact> facts;
   // this is a constructor
   // a contructor creates an instance of the class
   // this -> it refers to the members of this class.

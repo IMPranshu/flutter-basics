@@ -34,27 +34,17 @@ class LocationDetail extends StatelessWidget {
               .stretch, // crossaxis is straight line from left to right // .strecth will stretch the layout from left to right
 
           children: [
-            section("One", Colors.red),
-            section("Two", Colors.green),
+            _section("One", Colors.red),
+            _section("Two", Colors.green),
             // for using a private method/function in fliytter(just Like we do in C++)
             // use a _ befor the funtion name
-            _privateSection("Three", Colors.purple),
+            _section("Three", Colors.purple),
           ], // Container is the div is Flutter, we can use it to constraint
         ));
   }
 
-  Widget section(String title, Color color) {
-    return Container(
-      decoration: BoxDecoration(
-        // BoxDecoration is the most used
-        color: color, // predefined constant for color
-      ),
-      child: Text(title), // Widget Inside the COntainer
-    );
-  }
-
   // a private method that can be only accessed within the class
-  Widget _privateSection(String title, Color color) {
+  Widget _section(String title, Color color) {
     return Container(
       decoration: BoxDecoration(
         // BoxDecoration is the most used
