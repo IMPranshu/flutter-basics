@@ -31,9 +31,7 @@ class LocationDetail extends StatelessWidget {
     // Just remeber whenever we use Build we have to pass a "context"
     return Scaffold(
         // It provides a blank screen that is hsown in the display
-        appBar: AppBar(
-          title: Text(location.name),
-        ),
+        appBar: AppBar(title: Text(location.name)),
         body: Column(
           mainAxisAlignment: MainAxisAlignment
               .start, // mainaxis is straight line from top to bottom. .end will start layout i.e. the contents from the bottom without any spacing

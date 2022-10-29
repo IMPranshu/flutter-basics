@@ -4,7 +4,7 @@ import '../models/location_fact.dart';
 // the mock folder we created is being used for mocking the data.
 // THis method for using mock data is used in production environements
 // we are extendign the Locatin here. [that will be covered int eh later section of the course]
-class MockLocation extends Location {
+class MockLocation implements Location {
   // as it is a static it has to be Capital letter
   static Location FetchAny() {
     return Location(
