@@ -40,24 +40,26 @@ class LocationDetail extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment
               .stretch, // crossaxis is straight line from left to right // .strecth will stretch the layout from left to right
 
-          children: [
-            _section("One", Colors.red),
-            _section("Two", Colors.green),
-            // for using a private method/function in fliytter(just Like we do in C++)
-            // use a _ befor the funtion name
-            _section("Three", Colors.purple),
-          ], // Container is the div is Flutter, we can use it to constraint
+          children: _renderFacts(
+              location), // Container is the div is Flutter, we can use it to constraint
         ));
   }
 
+  List<Widget> _renderFacts(Location location) {
+    final result = <Widget>[];
+    for (int i = 0; i < location.facts.length; i++) {
+      result.add(_sectionTitle(location.facts[i].title));
+      result.add(_sectionTitle(location.facts[i].text));
+    }
+    return result;
+  }
+
   // a private method that can be only accessed within the class
-  Widget _section(String title, Color color) {
-    return Container(
-      decoration: BoxDecoration(
-        // BoxDecoration is the most used
-        color: color, // predefined constant for color
-      ),
-      child: Text(title), // Widget Inside the COntainer
-    );
+  Widget _sectionTitle(String text) {
+    return Text(text); // Widget Inside the COntainer
+  }
+
+  Widget _sectionText(String text) {
+    return Text(text); // Widget Inside the COntainer
   }
 }
