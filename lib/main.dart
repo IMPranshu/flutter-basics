@@ -5,7 +5,7 @@ import 'location_detail.dart';
 import 'mocks/mock_location.dart';
 
 void main() {
-  final Location mockLocation = MockLocation.fetchAny();
+  final Location mockLocation = MockLocation.FetchAny();
 
   return runApp(MaterialApp(
       // MaterialApp() is basically a constructor that we use make widgets in flutter.

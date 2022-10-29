@@ -5,7 +5,8 @@ import '../models/location_fact.dart';
 // THis method for using mock data is used in production environements
 // we are extendign the Locatin here. [that will be covered int eh later section of the course]
 class MockLocation extends Location {
-  static Location fetchAny() {
+  // as it is a static it has to be Capital letter
+  static Location FetchAny() {
     return Location(
         name: 'Arashiyama Bamboo Grove, Kyoto, Japan',
         url:
