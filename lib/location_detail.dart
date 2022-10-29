@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'models/location.dart';
 
 // 2 types of Widgets Stateful and Stateless
 // here state=data, data that the app keep track in the memory
@@ -12,6 +13,12 @@ import 'package:flutter/material.dart';
 // basicaly inheritace
 
 class LocationDetail extends StatelessWidget {
+  final Location location;
+
+  // whatever data is passed in locatinDetails that will be automatically assigned to the location
+
+  LocationDetail(this.location);
+
 // In every widget there is a build func. and we need to override it
 // in order to put something on the screen
 
@@ -25,7 +32,7 @@ class LocationDetail extends StatelessWidget {
     return Scaffold(
         // It provides a blank screen that is hsown in the display
         appBar: AppBar(
-          title: Text("Hello, World!!"),
+          title: Text(location.name),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment
